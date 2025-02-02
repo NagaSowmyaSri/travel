@@ -1,0 +1,165 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f8ff; /* Light blue background */
+  background: url('C:\Users\DELL\Desktop\Hackathon\travelstory-app\public\bgimg.jpg') center/cover no-repeat;
+}
+
+/* Main Container */
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0f7fa; /* Soft cyan */
+  width: 85%;
+  max-width: 950px;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(27, 27, 27, 0.2);
+}
+
+/* Left Section - Image and Text */
+.auth-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-radius: 12px 0 0 12px;
+  background: url('../assets/Logimg.jpg') center/cover no-repeat;
+  background-color: none;
+}
+
+/* Dark Overlay */
+.auth-left::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: none;
+  border-radius: 12px 0 0 12px;
+}
+
+/* Overlay Text */
+.text-overlay {
+  position: relative;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: #9eb6d0;
+  background-image: none;
+}
+
+.auth-left h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.auth-left p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Right Section - Form */
+.auth-right {
+  width: 50%;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 0 12px 12px 0;
+  text-align: center;
+}
+
+/* Form Heading */
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #007bff;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Toggle Between Login and Signup */
+.toggle-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .auth-left, .auth-right {
+    width: 100%;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .auth-left {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .auth-right {
+    border-radius: 0 0 12px 12px;
+  }
+}
